@@ -6,7 +6,7 @@
             "value": "westus"
         },
         "networkInterfaceName": {
-            "value": "vm001490"
+            "value": "vm001151"
         },
         "networkSecurityGroupName": {
             "value": "vm001-nsg"
@@ -29,34 +29,13 @@
             ]
         },
         "subnetName": {
-            "value": "default"
+            "value": "NE_Subnet_Test01"
         },
-        "virtualNetworkName": {
-            "value": "RG_WestUS_AzureImageBuilder-vnet"
+        "virtualNetworkId": {
+            "value": "/subscriptions/3f488605-d55f-4bc3-923d-f4f573ce6876/resourceGroups/IT_DR/providers/Microsoft.Network/virtualNetworks/NE_VNET_Test"
         },
-        "addressPrefixes": {
-            "value": [
-                "10.0.16.0/24"
-            ]
-        },
-        "subnets": {
-            "value": [
-                {
-                    "name": "default",
-                    "properties": {
-                        "addressPrefix": "10.0.16.0/24"
-                    }
-                }
-            ]
-        },
-        "publicIpAddressName": {
-            "value": "vm001-ip"
-        },
-        "publicIpAddressType": {
-            "value": "Dynamic"
-        },
-        "publicIpAddressSku": {
-            "value": "Basic"
+        "publicIpAddressId": {
+            "value": "/subscriptions/3f488605-d55f-4bc3-923d-f4f573ce6876/resourceGroups/IT_DR/providers/Microsoft.Network/publicIPAddresses/NE_PIP_Dynamic_Test03"
         },
         "virtualMachineName": {
             "value": "vm001"
@@ -75,18 +54,6 @@
         },
         "adminPassword": {
             "value": null
-        },
-        "diagnosticsStorageAccountName": {
-            "value": "rgwestusazureimagebuilde"
-        },
-        "diagnosticsStorageAccountId": {
-            "value": "Microsoft.Storage/storageAccounts/rgwestusazureimagebuilde"
-        },
-        "diagnosticsStorageAccountType": {
-            "value": "Standard_LRS"
-        },
-        "diagnosticsStorageAccountKind": {
-            "value": "Storage"
         }
     },
     "variables": {
