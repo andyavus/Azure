@@ -1,69 +1,92 @@
 {
-    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "string"
+            "value": "westus"
         },
         "networkInterfaceName": {
-            "type": "string"
+            "value": "vm001490"
         },
         "networkSecurityGroupName": {
-            "type": "string"
+            "value": "vm001-nsg"
         },
         "networkSecurityGroupRules": {
-            "type": "array"
+            "value": [
+                {
+                    "name": "RDP",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "3389"
+                    }
+                }
+            ]
         },
         "subnetName": {
-            "type": "string"
+            "value": "default"
         },
         "virtualNetworkName": {
-            "type": "string"
+            "value": "RG_WestUS_AzureImageBuilder-vnet"
         },
         "addressPrefixes": {
-            "type": "array"
+            "value": [
+                "10.0.16.0/24"
+            ]
         },
         "subnets": {
-            "type": "array"
+            "value": [
+                {
+                    "name": "default",
+                    "properties": {
+                        "addressPrefix": "10.0.16.0/24"
+                    }
+                }
+            ]
         },
         "publicIpAddressName": {
-            "type": "string"
+            "value": "vm001-ip"
         },
         "publicIpAddressType": {
-            "type": "string"
+            "value": "Dynamic"
         },
         "publicIpAddressSku": {
-            "type": "string"
+            "value": "Basic"
         },
         "virtualMachineName": {
-            "type": "string"
+            "value": "vm001"
         },
         "virtualMachineRG": {
-            "type": "string"
+            "value": "RG_WestUS_AzureImageBuilder"
         },
         "osDiskType": {
-            "type": "string"
+            "value": "Standard_LRS"
         },
         "virtualMachineSize": {
-            "type": "string"
+            "value": "Standard_D2_v2"
         },
         "adminUsername": {
-            "type": "string"
+            "value": "tuna"
         },
         "adminPassword": {
-            "type": "secureString"
+            "value": null
         },
         "diagnosticsStorageAccountName": {
-            "type": "string"
+            "value": "rgwestusazureimagebuilde"
         },
         "diagnosticsStorageAccountId": {
-            "type": "string"
+            "value": "Microsoft.Storage/storageAccounts/rgwestusazureimagebuilde"
         },
         "diagnosticsStorageAccountType": {
-            "type": "string"
+            "value": "Standard_LRS"
         },
         "diagnosticsStorageAccountKind": {
-            "type": "string"
+            "value": "Storage"
         }
     },
     "variables": {
